@@ -3,8 +3,7 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTLinkingManager.h>
 
-// #import "RNBootSplash.h"
-#import "RNCConfig.h"
+#import "RNBootSplash.h"
 
 @implementation AppDelegate
 
@@ -15,8 +14,6 @@
     self.initialProps = @{};
 
     [super application:application didFinishLaunchingWithOptions:launchOptions];
-
-    NSDictionary *config = [RNCConfig env];
 
     return YES;
 }
@@ -41,7 +38,7 @@
 
 - (void)customizeRootView:(RCTRootView *)rootView {
     [super customizeRootView:rootView];
-    // [RNBootSplash initWithStoryboard:@"LaunchScreen" rootView:rootView];
+    [RNBootSplash initWithStoryboard:@"LaunchScreen" rootView:rootView];
 }
 
 @end
